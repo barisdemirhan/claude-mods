@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-mods",
-  "description": "Mods for Claude Code by Barış Demirhan: ambient scenes, a T-Rex runner, a pomodoro timer and an idle game",
+  "description": "Mods for Claude Code by Barış Demirhan: ambient scenes, a deck for the work behind the conversation, a T-Rex runner, a pomodoro timer and an idle game",
   "owner": {
     "name": "Barış Demirhan",
     "url": "https://github.com/barisdemirhan"
@@ -16,6 +16,16 @@
       },
       "category": "fun",
       "homepage": "https://github.com/barisdemirhan/claude-ambient"
+    },
+    {
+      "name": "deck",
+      "description": "A pane beside the conversation for the work behind it: running shells and agents, the model and a clickable effort meter, and step-by-step progress of any job as a tree: /deck",
+      "source": {
+        "source": "github",
+        "repo": "barisdemirhan/claude-deck"
+      },
+      "category": "productivity",
+      "homepage": "https://github.com/barisdemirhan/claude-deck"
     },
     {
       "name": "dino",
