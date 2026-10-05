@@ -1,0 +1,51 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-mods",
+  "description": "Mods for Claude Code by Barış Demirhan: ambient scenes, a T-Rex runner, a pomodoro timer and an idle game",
+  "owner": {
+    "name": "Barış Demirhan",
+    "url": "https://github.com/barisdemirhan"
+  },
+  "plugins": [
+    {
+      "name": "ambient",
+      "description": "A living band above the prompt that Claude's work feeds, with sound: an aquarium, a bonsai, a skyline, constellations, weather that can follow the real sky, a train, Game of Life, a heartbeat, a fireplace, digital rain or a lofi desk. /ambient picks the scene",
+      "source": {
+        "source": "github",
+        "repo": "barisdemirhan/claude-ambient"
+      },
+      "category": "fun",
+      "homepage": "https://github.com/barisdemirhan/claude-ambient"
+    },
+    {
+      "name": "dino",
+      "description": "A T-Rex runner in a pane, inspired by Chrome's offline game: /dino, then space to jump, s to duck and p to pause while Claude works",
+      "source": {
+        "source": "github",
+        "repo": "barisdemirhan/claude-dino"
+      },
+      "category": "fun",
+      "homepage": "https://github.com/barisdemirhan/claude-dino"
+    },
+    {
+      "name": "pomodoro",
+      "description": "A pomodoro timer on the prompt's hint line whose break lands while Claude works, with buttons beside it, a history and a report: /pomodoro start",
+      "source": {
+        "source": "github",
+        "repo": "barisdemirhan/claude-pomodoro"
+      },
+      "category": "productivity",
+      "homepage": "https://github.com/barisdemirhan/claude-pomodoro"
+    },
+    {
+      "name": "tycoon",
+      "description": "Token Tycoon, an idle game in a pane: Claude's tool calls earn tokens, tokens buy generators and upgrades, and everything is kept between sessions. /tycoon opens it",
+      "source": {
+        "source": "github",
+        "repo": "barisdemirhan/claude-tycoon"
+      },
+      "category": "fun",
+      "homepage": "https://github.com/barisdemirhan/claude-tycoon"
+    }
+  ]
+}
