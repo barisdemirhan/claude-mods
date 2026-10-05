@@ -52,7 +52,26 @@ This repository itself is a list: it runs nothing and collects nothing.
 
 Each mod's repository is still a marketplace of its own (`dino@claude-dino` and the like), and installs from there go on getting updates. Nothing has to change.
 
-Moving to `claude-mods` is a new install as Claude Code sees it, and starts with an empty store. Each mod's README says how to bring your data along, under Install. Keep one of the two installs, not both.
+Moving to `claude-mods` is a new install as Claude Code sees it, and starts with an empty store: without your scores, saves, rounds and settings, and without the secret that makes a name on a global top yours. To bring them along, copy the mod's store file to its new name before you install, with no Claude Code session open. For dino:
+
+```sh
+cp -R ~/.claude/plugins/store ~/claude-store-backup
+cp ~/.claude/plugins/store/dino_claude-dino-98d7fb92c86a.json ~/.claude/plugins/store/dino_claude-mods-aeb35b495c33.json
+claude plugin marketplace add barisdemirhan/claude-mods
+claude plugin install dino@claude-mods
+claude plugin uninstall dino@claude-dino
+```
+
+| Mod | Its store, installed from its own marketplace | Its store, installed from `claude-mods` |
+| --- | --- | --- |
+| ambient | `ambient_claude-ambient-abb626dfb229.json` | `ambient_claude-mods-c3eb600a5f3a.json` |
+| dino | `dino_claude-dino-98d7fb92c86a.json` | `dino_claude-mods-aeb35b495c33.json` |
+| pomodoro | `pomodoro_claude-pomodoro-69a776f141b5.json` | `pomodoro_claude-mods-cf0e3c48f8c2.json` |
+| tycoon | `tycoon_claude-tycoon-ed96090b0132.json` | `tycoon_claude-mods-42ed3c337a0e.json` |
+
+The files are in `~/.claude/plugins/store/`, where Claude Code 2.1.288 keeps a mod's store. The place is Claude Code's own and may change with it. The first line keeps a copy of every store in `~/claude-store-backup`, to put back if the move goes wrong. Uninstalling leaves the old store's file where it is.
+
+Keep one of the two installs, not both: with both on, every hook runs twice.
 
 ## How it is put together
 
